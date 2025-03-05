@@ -6,7 +6,7 @@ import { CiLogout } from "react-icons/ci";
 import { BiSolidContact } from "react-icons/bi";
 
 const Sidebar = ({Sidebar, setSidebar}) => {
-    const [isSidebarOpen, setIsSidebarOpen] = useState(true); // State to control sidebar visibility
+    const [isSidebarOpen, setIsSidebarOpen] = useState(true); 
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
