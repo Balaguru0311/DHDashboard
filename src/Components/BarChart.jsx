@@ -16,7 +16,7 @@ const MyBarChart = () => {
     <ResponsiveContainer width="95%" height={300}>
       <BarChart data={data} layout="vertical">
         {/* <CartesianGrid strokeDasharray="3 3" /> */}
-        <XAxis type="number" /> {/* Set interval to 10 */}
+        <XAxis type="number" /> 
         <YAxis dataKey="name" type="category" />
         <Tooltip />
         <Bar dataKey="value" fill="#312E81" />
