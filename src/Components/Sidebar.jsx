@@ -6,32 +6,27 @@ import { CiLogout } from "react-icons/ci";
 import { BiSolidContact } from "react-icons/bi";
 
 const Sidebar = ({Sidebar, setSidebar}) => {
-    const [isSidebarOpen, setIsSidebarOpen] = useState(true); 
-
-  const toggleSidebar = () => {
-    setIsSidebarOpen(!isSidebarOpen);
-  };
+   
   const toggleDeskSidebar = () => {
     setSidebar(!Sidebar);
-    setIsSidebarOpen(!isSidebarOpen);
   };
   return (
     <div>
     <button
         className="md:hidden bg-gray-800 text-white p-2 rounded fixed top-4 right-4 z-50"
-        onClick={toggleSidebar}
+        onClick={toggleDeskSidebar}
       >
-        {isSidebarOpen ? <FaTimes /> : <FaBars />}
+        {Sidebar ? <FaTimes /> : <FaBars />}
       </button>
       <button
         className={`hidden md:block mb-4 rounded hover:text-gray-300 fixed top-4 left-60 z-50 ${Sidebar ? "text-white p-2 bg-gray-800" : "text-gray bg-white p-2"}`}
         onClick={toggleDeskSidebar}
       >
-        {Sidebar ? <FaChevronLeft /> : <FaChevronRight />}
+        {Sidebar ? <FaChevronRight /> : <FaChevronLeft />}
       </button>
       <aside
         className={`bg-gray-800 text-white w-64 p-4 flex flex-col transition-all duration-300 ease-in-out transform ${
-          isSidebarOpen ? "translate-x-0" : "-translate-x-full"
+          Sidebar ? "translate-x-0" : "-translate-x-full"
         } fixed top-0 left-0 h-screen z-40 md:relative`}
       >
         

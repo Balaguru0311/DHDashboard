@@ -2,7 +2,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <div className="p-4 z-10 mt-12">
+    <div className="p-4 z-10 md:mt-12">
       <h3 className="text-[#312E81] text-2xl">Dashboard</h3>
       <header className="flex justify-between items-center relative mt-3">
         <div className="d-block">

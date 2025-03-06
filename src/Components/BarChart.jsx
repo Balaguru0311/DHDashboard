@@ -11,9 +11,9 @@ const data = [
 
 const MyBarChart = () => {
   return (
-    <div className="bg-[#bae8f9] rounded p-4 shadow">
+    <div className="bg-[#bae8f9] rounded py-4 shadow">
       <h3 className="text-lg text-center font-semibold mb-2">Response Breakdown</h3>
-    <ResponsiveContainer width="100%" height={300}>
+    <ResponsiveContainer width="95%" height={300}>
       <BarChart data={data} layout="vertical">
         {/* <CartesianGrid strokeDasharray="3 3" /> */}
         <XAxis type="number" /> {/* Set interval to 10 */}

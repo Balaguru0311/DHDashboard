@@ -1,7 +1,7 @@
 import React from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
 
-const data = [{ name: 'Response', value: 75 }, { name: 'Remaining', value: 25 }];
+const data = [{ name: 'Response', value: 75 },{ name: 'Remaining', value: 25, }];
 const COLORS = ['#312E81', '#E0E0E0'];
 
 const ResponseRate = () => {
@@ -9,7 +9,7 @@ const ResponseRate = () => {
     <div className="bg-[#bae8f9] rounded p-4 shadow">
       <h3 className="text-lg text-center font-semibold mb-2">Response Rate</h3>
       <div className="flex justify-center items-center">
-        <ResponsiveContainer width={250} height={200}>
+        <ResponsiveContainer width="100%" height={300}>
           <PieChart>
             <Pie
               data={data}
@@ -17,8 +17,9 @@ const ResponseRate = () => {
               nameKey="name"
               cx="50%"
               cy="50%"
-              innerRadius="60%" // Adjust to control the donut hole size
+              innerRadius="40%" // Adjust to control the donut hole size
               outerRadius="80%" // Adjust to control the donut outer radius
+              paddingAngle={0}
               fill="#8884d8"
             >
               {data.map((entry, index) => (
